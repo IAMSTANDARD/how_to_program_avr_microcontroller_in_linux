@@ -1,5 +1,6 @@
 # how_to_program_avr_microcontroller_in_linux
 ![Avr microcontrollers](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/AVR_group.jpg/220px-AVR_group.jpg)
+
 This is a guide on how to program avr microcontrollers in Linux. If you don't know how to, it is useful.
 ---
 ## Why in Linux?
@@ -10,8 +11,9 @@ It only achieves programming of the microcontroller. This repository does not ha
 
 ### Required
 - You need a USBasp, in order to be able to program your microcnotroller. Or just use an arduino as USBasp. 
-![AVR development board on top of arduino] (https://live.staticflickr.com/3558/3348049023_71fb537bcb_b.jpg)
-- Also have some basic required circuitry for your microcontroller. See that in the datasheet. Or just buy, or search up some development board for that microcontroller.  
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/19/USBasp_programmer.jpg" width="200">
 
+- Also have some basic required circuitry for your microcontroller. See that in the datasheet. Or just buy, or search up some development board for that microcontroller.  
+<img src="https://live.staticflickr.com/3558/3348049023_71fb537bcb_b.jpg" width="200">
 
 These instructions were copied from stack overflow. But I do not know what thread it was.
