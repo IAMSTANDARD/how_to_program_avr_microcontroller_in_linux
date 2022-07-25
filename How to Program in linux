@@ -1,0 +1,45 @@
+
+
+For developing AVR in Ubuntu there are just few steps :
+
+Install Tool-chain :
+
+sudo apt-get install gcc-avr binutils-avr gdb-avr avr-libc avrdude
+
+Create a Hello world Code and save :
+
+#include<avr/io.h>
+#define F_CPU 8000000UL
+#include<util/delay.h>
+int main() {
+    DDRB = 0xff; // make PORTB as O/P
+    PORTB = 0xFF;
+    while(1) {
+        PORTB |= (1 << 0);
+        _delay_ms(100);
+        PORTB &= ~(1 << 0);
+        _delay_ms(100);
+    }
+}
+
+Download Makefile tempelate and save in the same directory where you have saved the hello_world.c file.
+
+Edit Makefile:
+
+# MCU name (Specify the MCU you are using)
+MCU = atmega16
+# Processor frequency.
+F_CPU = 8000000
+# Target file name (without extension).
+#in this case file name is hello_world
+TARGET = main
+
+Build the target
+
+Just type make in the console and hit enter.
+
+Upload instructions into AVR using avrdude
+
+Use command in the console as : (assumed that the programmer you are using is usbasp, google or see manual for other options)
+
+$avrdude -c m16 -p usbasp -U flash:w:hello_world.hex
